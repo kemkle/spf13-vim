@@ -1,0 +1,37 @@
+let g:override_spf13_bundles = 1
+
+" Bundles {
+    " General
+    Bundle 'scrooloose/nerdtree'
+    "Bundle 'altercation/vim-colors-solarized'
+    Bundle 'skwp/vim-colors-solarized'
+    Bundle 'tpope/vim-surround'
+    Bundle 'kien/ctrlp.vim'
+    Bundle 'Lokaltog/vim-powerline'
+    Bundle 'Lokaltog/vim-easymotion'
+    Bundle 'jistr/vim-nerdtree-tabs'
+    "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+    "Bundle 'tpope/vim-rails.git'
+    "Bundle 'fholgado/minibufexpl.vim'
+
+    "Bundle 'L9'
+    "Bundle 'FuzzyFinder'
+    "Bundle 'YankRing.vim'
+    "Bundle 'git://git.wincent.com/command-t.git'
+
+    " General Programming
+    Bundle 'godlygeek/tabular'
+    Bundle 'tpope/vim-fugitive'
+    if executable('ctags')
+        Bundle 'majutsushi/tagbar'
+    endif
+
+    " Snippets & AutoComplete
+    "Bundle 'msanders/snipmate.vim'
+    Bundle 'Shougo/neocomplcache'
+    Bundle 'Shougo/neosnippet'
+    Bundle 'honza/snipmate-snippets'
+
+    " HTML
+    Bundle 'amirh/HTML-AutoCloseTag'
+" }

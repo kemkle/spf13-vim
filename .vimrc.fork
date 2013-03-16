@@ -1,0 +1,30 @@
+" General {
+
+    " Set to auto read when a file is changed from the outside
+    set autoread
+
+" }
+
+" Vim UI {
+
+    set nonu                        " Line numbers off
+
+" }
+
+" Key (re)Mappings {
+
+    " Fast saving
+    nmap <leader>w :w!<cr>
+
+" }
+
+" GUI Settings {
+
+    if has('gui_running')
+        set guioptions-=m           " Remove the menu
+        if has("gui_gtk2")
+            set guifont=Monaco\ 11,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
+        endif
+    endif
+
+" }
