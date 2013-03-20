@@ -7,6 +7,8 @@
 
 " Vim UI {
 
+    set nocursorline                  " Do NOT highlight current line as it makes moving(hjkl) rough
+
     set nonu                        " Line numbers off
 
 " }
