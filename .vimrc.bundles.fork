@@ -2,6 +2,8 @@
     set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 " }
 
+let g:spf13_no_autochdir = 1
+let g:spf13_no_fastTabs = 1
 let g:override_spf13_bundles = 1
 
 " Bundles {
@@ -13,7 +15,8 @@ let g:override_spf13_bundles = 1
     Bundle 'kien/ctrlp.vim'
     Bundle 'Lokaltog/powerline'
     Bundle 'Lokaltog/vim-easymotion'
-    Bundle 'jistr/vim-nerdtree-tabs'
+    "Bundle 'jistr/vim-nerdtree-tabs'
+    "Bundle 'nathanaelkane/vim-indent-guides'
     "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
     "Bundle 'tpope/vim-rails.git'
     "Bundle 'fholgado/minibufexpl.vim'
@@ -24,17 +27,20 @@ let g:override_spf13_bundles = 1
     "Bundle 'git://git.wincent.com/command-t.git'
 
     " General Programming
-    Bundle 'godlygeek/tabular'
+    Bundle 'scrooloose/syntastic'
     Bundle 'tpope/vim-fugitive'
+    Bundle 'godlygeek/tabular'
     if executable('ctags')
         Bundle 'majutsushi/tagbar'
     endif
 
     " Snippets & AutoComplete
-    "Bundle 'msanders/snipmate.vim'
     Bundle 'Shougo/neocomplcache'
     Bundle 'Shougo/neosnippet'
     Bundle 'honza/snipmate-snippets'
+
+    " PHP
+    Bundle 'vim-scripts/phpvim'
 
     " HTML
     Bundle 'amirh/HTML-AutoCloseTag'
