@@ -422,6 +422,21 @@
 
     " TagBar {
         nnoremap <silent> <leader>tt :TagbarToggle<CR>
+
+        " If using go please install the gotags program using the following
+        " go install github.com/jstemmer/gotags
+        " And make sure gotags is in your path
+        let g:tagbar_type_go = {
+            \ 'ctagstype' : 'go',
+            \ 'kinds'     : [  'p:package', 'i:imports:1', 'c:constants', 'v:variables',
+                \ 't:types',  'n:interfaces', 'w:fields', 'e:embedded', 'm:methods',
+                \ 'r:constructor', 'f:functions' ],
+            \ 'sro' : '.',
+            \ 'kind2scope' : { 't' : 'ctype', 'n' : 'ntype' },
+            \ 'scope2kind' : { 'ctype' : 't', 'ntype' : 'n' },
+            \ 'ctagsbin'  : 'gotags',
+            \ 'ctagsargs' : '-sort -silent'
+            \ }
     "}
 
     " PythonMode {
@@ -438,6 +453,8 @@
         nnoremap <silent> <leader>gb :Gblame<CR>
         nnoremap <silent> <leader>gl :Glog<CR>
         nnoremap <silent> <leader>gp :Git push<CR>
+        nnoremap <silent> <leader>gw :Gwrite<CR>:GitGutter<CR>
+        nnoremap <silent> <leader>gg :GitGutterToggle<CR>
     "}
 
     " neocomplcache {
@@ -517,10 +534,10 @@
         let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
 
         " Use honza's snippets.
-        let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
+        let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
         " Enable neosnippet snipmate compatibility mode
-        let g:neosnippet#enable_snipmate_compatibility = 1        
+        let g:neosnippet#enable_snipmate_compatibility = 1
 
         " For snippet_complete marker.
         if has('conceal')
