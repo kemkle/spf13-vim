@@ -47,7 +47,7 @@ let g:override_spf13_bundles = 1
     Bundle 'pythoncomplete'
 
     " Javascript
-    Bundle 'leshill/vim-json'
+    Bundle 'elzr/vim-json'
     Bundle 'groenewege/vim-less'
     Bundle 'pangloss/vim-javascript'
     Bundle 'briancollins/vim-jst'
