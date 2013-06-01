@@ -3,6 +3,9 @@
     " Set to auto read when a file is changed from the outside
     set autoread
 
+    " better encoding detection for chinese user
+    set fileencodings=ucs-bom,utf-8,chinese,taiwan,japan,korea,latin1
+
 " }
 
 " Vim UI {
@@ -17,12 +20,6 @@
 
     " Fast saving
     nmap <leader>w :w!<cr>
-
-    " These make <Esc>(from insert mode to normal) slow on my linux... :(
-    unmap [F
-    iunmap [F
-    unmap [H
-    iunmap [H
 
 " }
 

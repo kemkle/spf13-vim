@@ -11,8 +11,10 @@ let g:override_spf13_bundles = 1
     Bundle 'kien/ctrlp.vim'
     Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
     Bundle 'Lokaltog/vim-easymotion'
-    "Bundle 'jistr/vim-nerdtree-tabs'
+    Bundle 'jistr/vim-nerdtree-tabs'
+    "Bundle 'myusuf3/numbers.vim'
     "Bundle 'nathanaelkane/vim-indent-guides'
+    "Bundle 'airblade/vim-gitgutter'
     "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
     "Bundle 'tpope/vim-rails.git'
     "Bundle 'fholgado/minibufexpl.vim'
@@ -33,11 +35,33 @@ let g:override_spf13_bundles = 1
     " Snippets & AutoComplete
     Bundle 'Shougo/neocomplcache'
     Bundle 'Shougo/neosnippet'
-    Bundle 'honza/snipmate-snippets'
+    Bundle 'honza/vim-snippets'
 
     " PHP
     Bundle 'vim-scripts/phpvim'
 
+    " Python
+    Bundle 'klen/python-mode'
+    Bundle 'python.vim'
+    Bundle 'python_match.vim'
+    Bundle 'pythoncomplete'
+
+    " Javascript
+    Bundle 'leshill/vim-json'
+    Bundle 'groenewege/vim-less'
+    Bundle 'pangloss/vim-javascript'
+    Bundle 'briancollins/vim-jst'
+    Bundle 'kchmck/vim-coffee-script'
+
     " HTML
     Bundle 'amirh/HTML-AutoCloseTag'
+    Bundle 'hail2u/vim-css3-syntax'
+    Bundle 'tpope/vim-haml'
+
+    " Go Lang
+    Bundle 'jnwhiteh/vim-golang'
+    Bundle 'spf13/vim-gocode'
+
+    " Misc
+    Bundle 'tpope/vim-markdown'
 " }
