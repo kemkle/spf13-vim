@@ -10,9 +10,11 @@
 
 " Vim UI {
 
-    set nocursorline                  " Do NOT highlight current line as it makes moving(hjkl) rough
+    " Do NOT highlight current line as it makes moving(hjkl) rough
+    set nocursorline
 
-    set nonu                        " Line numbers off
+    " Line numbers off
+    set nonu
 
 " }
 

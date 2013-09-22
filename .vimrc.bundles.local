@@ -1,0 +1,29 @@
+" Bundles {
+    let g:spf13_bundle_groups=['python', 'go', 'javascript', 'html']
+
+    " General
+    Bundle 'scrooloose/nerdtree'
+    Bundle 'skwp/vim-colors-solarized'
+    Bundle 'tpope/vim-surround'
+    Bundle 'kien/ctrlp.vim'
+    Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
+    Bundle 'Lokaltog/vim-easymotion'
+    Bundle 'jistr/vim-nerdtree-tabs'
+
+    " General Programming
+    Bundle 'scrooloose/syntastic'
+    Bundle 'tpope/vim-fugitive'
+    Bundle 'godlygeek/tabular'
+    if executable('ctags')
+        Bundle 'majutsushi/tagbar'
+    endif
+
+    " Snippets & AutoComplete
+    Bundle 'Valloric/YouCompleteMe'
+
+    " PHP
+    Bundle 'vim-scripts/phpvim'
+
+    " Misc
+    Bundle 'tpope/vim-markdown'
+" }
