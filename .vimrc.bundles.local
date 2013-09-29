@@ -20,6 +20,7 @@
 
     " Snippets & AutoComplete
     Bundle 'Valloric/YouCompleteMe'
+    Bundle 'SirVer/ultisnips'
 
     " PHP
     Bundle 'vim-scripts/phpvim'

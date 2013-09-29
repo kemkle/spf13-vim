@@ -25,6 +25,12 @@
 
 " }
 
+" Plugins {
+    " Ultisnips {
+        let g:UltiSnipsExpandTrigger = '<c-j>'
+    " }
+" }
+
 " GUI Settings {
 
     if has('gui_running')
