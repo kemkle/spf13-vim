@@ -61,14 +61,14 @@
         Bundle 'gmarik/vundle'
         Bundle 'MarcWeber/vim-addon-mw-utils'
         Bundle 'tomtom/tlib_vim'
-        if executable('ack-grep')
+        if executable('ag')
+            Bundle 'mileszs/ack.vim'
+            let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
+        elseif executable('ack-grep')
             let g:ackprg="ack-grep -H --nocolor --nogroup --column"
             Bundle 'mileszs/ack.vim'
         elseif executable('ack')
             Bundle 'mileszs/ack.vim'
-        elseif executable('ag')
-            Bundle 'mileszs/ack.vim'
-            let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
         endif
     " }
 
@@ -126,6 +126,8 @@
             endif
             Bundle 'mhinz/vim-signify'
             Bundle 'tpope/vim-abolish.git'
+            Bundle 'osyo-manga/vim-over'
+            Bundle 'justinmk/vim-sneak'
         endif
     " }
 
@@ -203,7 +205,7 @@
             Bundle 'dag/vim2hs'
             Bundle 'Twinside/vim-haskellConceal'
             Bundle 'lukerandall/haskellmode-vim'
-            Bundle 'ujihisa/neco-ghc'
+            Bundle 'eagletmt/neco-ghc'
             Bundle 'eagletmt/ghcmod-vim'
             Bundle 'Shougo/vimproc'
             Bundle 'adinapoli/cumino'

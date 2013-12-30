@@ -252,11 +252,32 @@
     noremap k gk
 
     " Same for 0, home, end, etc
-    noremap $ g$
-    noremap <End> g<End>
-    noremap 0 g0
-    noremap <Home> g<Home>
-    noremap ^ g^
+    function! WrapRelativeMotion(key, ...)
+        let vis_sel=""
+        if a:0
+            let vis_sel="gv"
+        endif
+        if &wrap
+            execute "normal!" vis_sel . "g" . a:key
+        else
+            execute "normal!" vis_sel . a:key
+        endif
+    endfunction
+
+    " Map g* keys in Normal, Operator-pending, and Visual+select (over written
+    " below) modes
+    noremap $ :call WrapRelativeMotion("$")<CR>
+    noremap <End> :call WrapRelativeMotion("$")<CR>
+    noremap 0 :call WrapRelativeMotion("0")<CR>
+    noremap <Home> :call WrapRelativeMotion("0")<CR>
+    noremap ^ :call WrapRelativeMotion("^")<CR>
+    " Over write the Visual+Select mode mappings to ensure correct mode is
+    " passed to WrapRelativeMotion
+    vnoremap $ :<C-U>call WrapRelativeMotion("$", 1)<CR>
+    vnoremap <End> :<C-U>call WrapRelativeMotion("$", 1)<CR>
+    vnoremap 0 :<C-U>call WrapRelativeMotion("0", 1)<CR>
+    vnoremap <Home> :<C-U>call WrapRelativeMotion("0", 1)<CR>
+    vnoremap ^ :<C-U>call WrapRelativeMotion("^", 1)<CR>
 
     " The following two lines conflict with moving to top and
     " bottom of the screen
@@ -456,6 +477,7 @@
         set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
         nmap <leader>sl :SessionList<CR>
         nmap <leader>ss :SessionSave<CR>
+        nmap <leader>sc :SessionClose<CR>
     " }
 
     " JSON {
@@ -748,6 +770,7 @@
             let g:indent_guides_auto_colors = 1
         else
             " For some colorschemes, autocolor will not work (eg: 'desert', 'ir_black')
+            let g:indent_guides_auto_colors = 0
             autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#212121 ctermbg=3
             autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#404040 ctermbg=4
         endif
